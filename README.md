@@ -1,4 +1,4 @@
-# LAMBO4J (Language Models Bindings, Optimized for Java)
+# LAMBO4J (Language Models Bindings - Optimized for Java)
 ![llama](logo800x800.png)
 
 LAMBO4J makes it possible to locally run LargeLanguageModels (LLMs) like Llama3, Mistral, DeepSeek within your Java Application.
