@@ -1,0 +1,1 @@
+Compile the C++ Part on a Mac and put the generated file ``liblm4j.dylib`` here.
