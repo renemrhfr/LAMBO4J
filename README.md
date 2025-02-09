@@ -5,7 +5,7 @@ LAMBO4J makes it possible to locally run LargeLanguageModels (LLMs) like Llama3,
 
 It acts as a Wrapper for the amazing [Llama.cpp](https://github.com/ggerganov/llama.cpp) Project and makes it super-easy to write LLM-Driven Java Applications without the need of any 3rd Party tools.
 
-You are in full control of how you use and expose the LanguageModel and don't have to trust a library or a closed-source program how your resources and ports are exposed.
+You are in full control of how you use the LanguageModel and don't have to trust a library or a closed-source program how your resources and ports are exposed.
 
 ## Project Strucutre
 - In the .cpp Folder you find the code for llama.cpp, a wrapper for simple usage and the JNI Classes for binding to Java. You use this to compile the libraries for your OS/Architecture or further optimize/change the code.
