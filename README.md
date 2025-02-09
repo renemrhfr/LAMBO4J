@@ -1,14 +1,15 @@
 # LAMBO4J (Language Model Bindings - Optimized for Java)
 ![llama](logo800x800.png)
 
-LAMBO4J makes it possible to locally run LargeLanguageModels (LLMs) like Llama3, Mistral, DeepSeek within your Java Application.
+LAMBO4J makes it possible to locally run LargeLanguageModels (LLMs) like Llama, Mistral and DeepSeek within your Java Application.
 
 It acts as a Wrapper for the amazing [Llama.cpp](https://github.com/ggerganov/llama.cpp) Project and makes it super-easy to write LLM-Driven Java Applications without the need of any 3rd Party tools.
 
 You are in full control of how you use the LanguageModel and don't have to trust a library or a closed-source program how your resources and ports are exposed.
 
 ## Project Strucutre
-- In the .cpp Folder you find the code for llama.cpp, a wrapper for simple usage and the JNI Classes for binding to Java. You use this to compile the libraries for your OS/Architecture or further optimize/change the code.
+- In the .cpp Folder you find the code for llama.cpp, aswell as a wrapper for simple usage and the JNI Classes for binding to Java. You use this to compile the libraries for your OS/Architecture or further optimize/change the code.
+I plan to provide pre-compiled Versions in the future, but for now you'll have to compile it yourself (see C++ Folder Section below)
 - In the Java Folder you will find a usage example in Main.java. 
 
 ## Quick Start
@@ -19,8 +20,8 @@ You are in full control of how you use the LanguageModel and don't have to trust
 4. Copy the generated library from the release folder to ```java/src/main/resources/{your-os-and-architecture}```
 5. Run Main.java and enter your first Prompt via the Command-Line!
 
-## Optimize and change the native Code
-The cpp-Folder holds the core of [Llama.cpp](https://github.com/ggerganov/llama.cpp), enabling inference. 
+## C++ Folder
+The cpp-Folder holds the core of [Llama.cpp](https://github.com/ggerganov/llama.cpp), enabling inference and the wrapper + JNI Code.
 
 Inside the lambo4j folder, you can find the things you are most likely to adjust with ```com_renemrhfr_LanguageModel.h``` and ```jni_implementation.cpp``` acting as the bridge to Java  and ```llamawrapper``` being the class that handles 
 the communication with the Large Language Model via llama.cpp.
@@ -40,7 +41,7 @@ It was important to me to bring full control of the Conversation-History and Sys
 You can add messages by calling the .addMessage Method:
 
 ```
-llama.addMessage("user", "Is Mayonnaise an instrument?");
+llama3.addMessage("user", "Is Mayonnaise an instrument?");
 ```
 
 where the first Parameter can be "user", "assistant" or "system".
