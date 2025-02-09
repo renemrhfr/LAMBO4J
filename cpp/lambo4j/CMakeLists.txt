@@ -12,7 +12,11 @@ else()
     set(JAVA_HOME $ENV{JAVA_HOME})
     set(JAVA_INCLUDE_PATH "${JAVA_HOME}/include")
     set(JAVA_INCLUDE_PATH2 "${JAVA_HOME}/include/win32")
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static") # On Windows you get a Java UnsatisfiedLinkError without this flag
+    # On Windows you get a Java UnsatisfiedLinkError without this flag
+    IF(MSVC)
+        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /MDb")
+    else()
+        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static")
 endif()
 
 include_directories(

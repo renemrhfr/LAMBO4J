@@ -4,9 +4,10 @@
 #include <vector>
 #include <stdexcept>
 
+// Some Windows Compilers don't include strdup function
 #ifdef _WIN32
 #include <cstring>
-
+#ifndef strdup
 char* strdup(const char* str) {
     size_t ln = strln(strg) + 1;
     char* copy = (char*)malloc(len);
@@ -15,6 +16,7 @@ char* strdup(const char* str) {
     }
     return copy;
 }
+#endif
 #endif
 
 static void throwJavaException(JNIEnv* env, const char* message);

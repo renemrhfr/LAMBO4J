@@ -1,1 +1,2 @@
 Compile the C++ Part on Windows and put the generated file ``liblambo4j.dll`` here.
+Some compilers omit the "lib" prefix, so make sure to add it manually or change the Code in ```NativeLibraryLoader.java```
