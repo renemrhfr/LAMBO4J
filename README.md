@@ -1,4 +1,4 @@
-# LAMBO4J (Language Models Bindings, Optimized for Java)
+# LAMBO4J (Language Model Bindings - Optimized for Java)
 ![llama](logo800x800.png)
 
 LAMBO4J makes it possible to locally run LargeLanguageModels (LLMs) like Llama3, Mistral, DeepSeek within your Java Application.
@@ -15,7 +15,9 @@ You are in full control of how you use and expose the LanguageModel and don't ha
 1. Download a .GGUF model from Hugging Face and put it in the /models/ Folder
 2. Navigate to the /java/ Folder and change the model-name accordingly for instantiating the LanguageModel Instance:
 ```LanguageModel llama = new LanguageModel("../models/llama3-8b.gguf", 2048, 99)```
-3. Run Main.java and enter your first Prompt via the Command-Line!
+3. Open the cpp Folder and run the lambo4j goal
+4. Copy the generated library from the release folder to ```java/src/main/resources/{your-os-and-architecture}```
+5. Run Main.java and enter your first Prompt via the Command-Line!
 
 ## Optimize and change the native Code
 The cpp-Folder holds the core of [Llama.cpp](https://github.com/ggerganov/llama.cpp), enabling inference. 
