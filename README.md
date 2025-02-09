@@ -19,14 +19,16 @@ You are in full control of how you use the LanguageModel and don't have to trust
 4. Copy the generated library from the release folder to ```java/src/main/resources/{your-os-and-architecture}```
 5. Run Main.java and enter your first Prompt via the Command-Line!
 
-## C++ Folder
+## What to adjust (first)
 The cpp-Folder holds the core of [Llama.cpp](https://github.com/ggerganov/llama.cpp), enabling inference and the wrapper + JNI Code.
 
-Inside the lambo4j folder, you can find the things you are most likely to adjust with ```com_renemrhfr_LanguageModel.h``` and ```jni_implementation.cpp``` acting as the bridge to Java  and ```llamawrapper``` being the class that handles 
+Inside the lambo4j folder, you can find the things you most likely want to play around with.
+
+```com_renemrhfr_LanguageModel.h``` and ```jni_implementation.cpp``` act as the bridge to Java  and ```llamawrapper``` is the class that handles 
 the communication with the Large Language Model via llama.cpp.
 
 You can build the library with the lambo4j goal in CMake. Put it in the resources folder of the Java Project and load it from there.
-Note that NativeLibraryLoader.java checks your os and builds up a folder name from there. you can remove or adjust this for your needs.
+If the library cannot be found, first check NativeLibraryLoader.java as it builds up a folder name from your os and architecture. You can remove or adjust this for your needs.
 
 ## Usage in your Projects
 In your Java Code, initialize an Instance of com.renemrhfr.LanguageModel like this:
