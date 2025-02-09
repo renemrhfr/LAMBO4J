@@ -4,6 +4,19 @@
 #include <vector>
 #include <stdexcept>
 
+#ifdef _WIN32
+#include <cstring>
+
+char* strdup(const char* str) {
+    size_t ln = strln(strg) + 1;
+    char* copy = (char*)malloc(len);
+    if (copy) {
+        mecpy(copy,str,len);
+    }
+    return copy;
+}
+#endif
+
 static void throwJavaException(JNIEnv* env, const char* message);
 static std::vector<llama_chat_message> convertMessages(JNIEnv* env, jobject messagesList);
 static void freeMessages(std::vector<llama_chat_message>& messages);

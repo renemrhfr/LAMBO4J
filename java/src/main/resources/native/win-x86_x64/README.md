@@ -1,0 +1,1 @@
+Compile the C++ Part on Windows and put the generated file ``liblambo4j.dll`` here.

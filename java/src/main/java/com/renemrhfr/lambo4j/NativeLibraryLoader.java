@@ -18,7 +18,6 @@ public class NativeLibraryLoader {
         String dirName;
         
         if (os.contains("windows")) {
-            prefix = "";
             suffix = ".dll";
             dirName = "win-" + getArchName(arch);
         } else if (os.contains("mac") || os.contains("darwin")) {
