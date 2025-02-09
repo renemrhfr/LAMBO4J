@@ -8,8 +8,7 @@ It acts as a Wrapper for the amazing [Llama.cpp](https://github.com/ggerganov/ll
 You are in full control of how you use the LanguageModel and don't have to trust a library or a closed-source program how your resources and ports are exposed.
 
 ## Project Strucutre
-- In the .cpp Folder you find the code for llama.cpp, aswell as a wrapper for simple usage and the JNI Classes for binding to Java. You use this to compile the libraries for your OS/Architecture or further optimize/change the code.
-I plan to provide pre-compiled Versions in the future, but for now you'll have to compile it yourself (see C++ Folder Section below)
+- In the .cpp Folder you find the code for llama.cpp, aswell as a wrapper for simple usage and the JNI Classes for binding to Java. You use this to compile the libraries for your OS/Architecture or further optimize/change the code. You only need this to compile the library once, after that only need the Java Part! I plan to provide pre-compiled Libraries so in the future you'll be able to skip this part.
 - In the Java Folder you will find a usage example in Main.java. 
 
 ## Quick Start
