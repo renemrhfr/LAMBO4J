@@ -64,3 +64,4 @@ The Project is still a Work-In-Progress, my next goals are:
 - [ ] More comprehensive documentation, especially in the code
 - [ ] Enums for Roles
 - [ ] Further cleanup unused C++ Code and push a minimal package to this repo
+- [ ] Support for Quick Text Embeddings, for example in RAG-Projects.
